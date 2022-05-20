@@ -18,7 +18,7 @@ import java.util.Locale;
  */
 public class computer extends SQLiteOpenHelper {
 
-    private static final String Database_path = "/data/data/com.kvikesh800gmail.relativlayoutjava/databases/";
+    private static final String Database_path = "/data/data/com.ahmedwalid.relativlayoutjava/databases/";
     private static final String Database_name = "computer.db";//NAME of database stored in Assets folder
     private static final String Table_name = "computer";//name of table
     private static final String uid = "_id";//name of column1

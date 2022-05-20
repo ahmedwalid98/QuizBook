@@ -17,7 +17,7 @@ import java.util.Locale;
  * Created by Vikesh PC on 08-04-2016.
  */
 public class sports extends SQLiteOpenHelper {
-    private static final String Database_path = "/data/data/com.kvikesh800gmail.relativlayoutjava/databases/";
+    private static final String Database_path = "/data/data/com.ahmedwalid.relativlayoutjava/databases/";
     private static final String Database_name = "sports.db";//NAME of database stored in Assets folder
     private static final String Table_name = "sports";//name of table
     private static final String uid = "_id";//name of column1

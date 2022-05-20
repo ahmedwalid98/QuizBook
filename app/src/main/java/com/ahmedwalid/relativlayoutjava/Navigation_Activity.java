@@ -26,7 +26,7 @@ public class Navigation_Activity extends AppCompatActivity
 
     TextView nav_header_nam, nav_header_emal;
     ImageView nav_header_imag;
-    public final static String Message = "com.kvikesh800gmail.relativlayoutjava.MESSAGE";
+    public final static String Message = "com.ahmedwalid.relativlayoutjava.MESSAGE";
     Button c1, c2, c3, c4, c5, c6, c7, c8, c9, c10;
     private ProgressDialog progressBar;
 

@@ -15,7 +15,7 @@ import java.util.Locale;
 
 
 public class maths extends SQLiteOpenHelper {
-    private static final String Database_path = "/data/data/com.kvikesh800gmail.relativlayoutjava/databases/";
+    private static final String Database_path = "/data/data/com.ahmedwalid.relativlayoutjava/databases/";
     private static final String Database_name = "maths.db";//NAME of database stored in Assets folder
     private static final String Table_name = "maths";//name of table
     private static final String uid = "_id";//name of column1
