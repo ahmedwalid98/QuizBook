@@ -1,4 +1,4 @@
-package com.kvikesh800gmail.relativlayoutjava;
+package com.ahmedwalid.relativlayoutjava;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

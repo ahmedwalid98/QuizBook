@@ -1,4 +1,4 @@
-package com.kvikesh800gmail.relativlayoutjava;
+package com.ahmedwalid.relativlayoutjava;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +27,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 //import android.content.DialogInterface;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     String gender;
     final static String TARGET_BASE_PATH = "/sdcard/appname/voices/";
     Spinner spinner;
-    MediaPlayer mediaPlayer;
+
     ImageView icon_user;
     private ProgressDialog progressBar;//Create a circular progressBar Dialog
     //private android.content.Context ActivityContext;
@@ -57,11 +57,7 @@ public class MainActivity extends AppCompatActivity {
         String gender_file = sharedPreferences.getString("gender", Default);
         SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
         //To play background sound
-        if (sp.getInt("Sound", 0) == 0) {
-            mediaPlayer = MediaPlayer.create(this, R.raw.abc);
-            mediaPlayer.start();
-            mediaPlayer.setLooping(true);
-        }
+
         if (name_file.equals(Default) || pass_file.equals(Default) || email_file.equals(Default) || gender_file.equals(Default)) {
 
             setContentView(R.layout.activity_main);
@@ -342,19 +338,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
-        if (sp.getInt("Sound", 0) == 0)
-            mediaPlayer.pause();
-    }
 
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
-        if (sp.getInt("Sound", 0) == 0)
-            mediaPlayer.start();
-    }
 }

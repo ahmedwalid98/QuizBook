@@ -1,4 +1,4 @@
-package com.kvikesh800gmail.relativlayoutjava;
+package com.ahmedwalid.relativlayoutjava;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 public class ScoreCard extends AppCompatActivity {
     TextView a1, a2, a3, a4, a5, a6, a7, a8, a9, a10;

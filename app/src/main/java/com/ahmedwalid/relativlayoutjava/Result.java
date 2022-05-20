@@ -1,9 +1,11 @@
-package com.kvikesh800gmail.relativlayoutjava;
+package com.ahmedwalid.relativlayoutjava;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+
 
 public class Result extends AppCompatActivity {
     TextView correct, incorrect, attempted, score, you;

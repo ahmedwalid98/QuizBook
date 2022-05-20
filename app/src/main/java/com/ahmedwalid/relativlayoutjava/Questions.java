@@ -1,10 +1,9 @@
-package com.kvikesh800gmail.relativlayoutjava;
+package com.ahmedwalid.relativlayoutjava;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.design.widget.Snackbar;
@@ -16,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.lzyzsd.circleprogress.DonutProgress;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -42,7 +42,7 @@ public class Questions extends AppCompatActivity {
     String global = null, Ques, Opta, Optb, Optc, Optd;
     ArrayList<Integer> list = new ArrayList<Integer>();
     Toast toast;
-    MediaPlayer mediaPlayer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,12 +64,7 @@ public class Questions extends AppCompatActivity {
         donutProgress.setTextColor(Color.parseColor("#FFFB385F"));
         donutProgress.setKeepScreenOn(true);
         SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
-        //To play background sound
-        if (sp.getInt("Sound", 0) == 0) {
-            mediaPlayer = MediaPlayer.create(this, R.raw.abc);
-            mediaPlayer.start();
-            mediaPlayer.setLooping(true);
-        }
+
 
         //Now the linking of all the datbase files with the Question activity
         Books = new books(this);
@@ -380,23 +375,7 @@ public class Questions extends AppCompatActivity {
         OptD.setText(Optd);
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        variable =1;
-        SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
-        if (sp.getInt("Sound", 0) == 0)
-            mediaPlayer.pause();
-    }
 
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        variable =1;
-        SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
-        if (sp.getInt("Sound", 0) == 0)
-            mediaPlayer.start();
-    }
 
     @Override
     public void onBackPressed() {

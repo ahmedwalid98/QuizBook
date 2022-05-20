@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kvikesh800gmail.relativlayoutjava">
+    package="com.ahmedwalid.relativlayoutjava">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.ahmedwalid.relativlayoutjava.MainActivity"
             android:label="Quizbook"
+            android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,57 +20,57 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Navigation_Activity"
+            android:name="com.ahmedwalid.relativlayoutjava.Navigation_Activity"
             android:label="QuizBook"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.ahmedwalid.relativlayoutjava.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.kvikesh800gmail.relativlayoutjava.MainActivity" />
+                android:value="com.ahmedwalid.relativlayoutjava.MainActivity" />
         </activity>
         <activity
-            android:name=".AboutUs"
+            android:name="com.ahmedwalid.relativlayoutjava.AboutUs"
             android:label="@string/title_activity_about_us"
-            android:parentActivityName=".Navigation_Activity"
+            android:parentActivityName="com.ahmedwalid.relativlayoutjava.Navigation_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.kvikesh800gmail.relativlayoutjava.Navigation_Activity" />
+                android:value="com.ahmedwalid.relativlayoutjava.Navigation_Activity" />
         </activity>
         <activity
-            android:name=".Questions"
+            android:name="com.ahmedwalid.relativlayoutjava.Questions"
             android:label="Questions"
-            android:parentActivityName=".Navigation_Activity"
+            android:parentActivityName="com.ahmedwalid.relativlayoutjava.Navigation_Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.kvikesh800gmail.relativlayoutjava.Navigation_Activity" />
+                android:value="com.ahmedwalid.relativlayoutjava.Navigation_Activity" />
         </activity>
         <activity
-            android:name=".Result"
+            android:name="com.ahmedwalid.relativlayoutjava.Result"
             android:label="Result" />
         <activity
-            android:name=".ScoreCard"
+            android:name="com.ahmedwalid.relativlayoutjava.ScoreCard"
             android:label="High Score"
-            android:parentActivityName=".Navigation_Activity"
+            android:parentActivityName="com.ahmedwalid.relativlayoutjava.Navigation_Activity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.kvikesh800gmail.relativlayoutjava.Navigation_Activity" />
+                android:value="com.ahmedwalid.relativlayoutjava.Navigation_Activity" />
         </activity>
         <activity
-            android:name=".Help"
+            android:name="com.ahmedwalid.relativlayoutjava.Help"
             android:label="Help" />
         <activity
-            android:name=".Setting_activity"
+            android:name="com.ahmedwalid.relativlayoutjava.Setting_activity"
             android:label="@string/title_activity_setting_activity"
-            android:parentActivityName=".Navigation_Activity"
+            android:parentActivityName="com.ahmedwalid.relativlayoutjava.Navigation_Activity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.kvikesh800gmail.relativlayoutjava.Navigation_Activity" />
+                android:value="com.ahmedwalid.relativlayoutjava.Navigation_Activity" />
         </activity>
     </application>
 

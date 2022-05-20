@@ -1,10 +1,9 @@
-package com.kvikesh800gmail.relativlayoutjava;
+package com.ahmedwalid.relativlayoutjava;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,6 +19,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+
 public class Navigation_Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -28,7 +29,6 @@ public class Navigation_Activity extends AppCompatActivity
     public final static String Message = "com.kvikesh800gmail.relativlayoutjava.MESSAGE";
     Button c1, c2, c3, c4, c5, c6, c7, c8, c9, c10;
     private ProgressDialog progressBar;
-    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +45,6 @@ public class Navigation_Activity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
         //To play background sound
-        if (sp.getInt("Sound", 0) == 0) {
-            mediaPlayer = MediaPlayer.create(this, R.raw.abc);
-            mediaPlayer.start();
-            mediaPlayer.setLooping(true);
-        }
 
         //Set name,email,image in  the navigation side drawer to those we enter in the login page
         String nav_header_name = sharedPreferences.getString("name", "xyz");
@@ -416,35 +411,11 @@ public class Navigation_Activity extends AppCompatActivity
             Intent chooser = Intent.createChooser(intent, "Send Feedback Via");
             startActivity(chooser);
 
-        } else if (id == R.id.nav_Help) {
-            Intent i = new Intent(this, Help.class);
-            startActivity(i);
-
-        } else if (id == R.id.nav_aboutus) {
-            Intent i = new Intent(this, AboutUs.class);
-            startActivity(i);
         }
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
-        if (sp.getInt("Sound", 0) == 0)
-            mediaPlayer.pause();
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        SharedPreferences sp = getSharedPreferences("Score", Context.MODE_PRIVATE);
-        if (sp.getInt("Sound", 0) == 0)
-            mediaPlayer.start();
     }
 
 }

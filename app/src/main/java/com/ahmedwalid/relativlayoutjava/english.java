@@ -1,4 +1,4 @@
-package com.kvikesh800gmail.relativlayoutjava;
+package com.ahmedwalid.relativlayoutjava;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -13,13 +13,11 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Locale;
 
-/**
- * Created by Vikesh PC on 08-04-2016.
- */
-public class sports extends SQLiteOpenHelper {
+
+public class english extends SQLiteOpenHelper {
     private static final String Database_path = "/data/data/com.kvikesh800gmail.relativlayoutjava/databases/";
-    private static final String Database_name = "sports.db";//NAME of database stored in Assets folder
-    private static final String Table_name = "sports";//name of table
+    private static final String Database_name = "english.db";//NAME of database stored in Assets folder
+    private static final String Table_name = "english";//name of table
     private static final String uid = "_id";//name of column1
     private static final String Question = "Question";//name of column2
     private static final String OptionA = "OptionA";//name of column3
@@ -31,7 +29,7 @@ public class sports extends SQLiteOpenHelper {
     public SQLiteDatabase sqlite;//object of type SQLiteDatabase
     private Context context;//Context object to get context from Question Activity
 
-    public sports(Context context) {//constructor
+    public english(Context context) {//constructor
         super(context, Database_name, null, version);
         this.context = context;
     }
