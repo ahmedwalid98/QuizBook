@@ -12,13 +12,6 @@ The salient features of the app are:
    
 The app is designed with Google Material Design that supports the Android versions from Kitkat 4.4.0 to Naugat 7.7.1 
 
-If you want to contact me, then feel free to ping me here: https://kvikesh800.wixsite.com/learner/contact
-
-### You can download the .apk file of the project at: https://github.com/vikesh8860/QuizBook/releases/latest
-
-### **I also highly recommend you to suggest some improvements in the project.**
-
-# Screenshots
 | ![main_first](https://user-images.githubusercontent.com/11665612/27259081-878e3e14-5428-11e7-8232-0819cef68906.png) | ![mian_second](https://user-images.githubusercontent.com/11665612/27259088-ad4e6552-5428-11e7-8b65-d7c01781345a.png) | ![categories1](https://user-images.githubusercontent.com/11665612/27259090-b33470d8-5428-11e7-987c-8bfa12f8b3f0.png) |
 |:---:|:---:|:---:|
 | **Main Home Page (First time login)** | **Main Home Page (Normal login)** | **Categories** |
